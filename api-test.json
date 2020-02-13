@@ -1,0 +1,142 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+      {
+          "type": "Container",
+          "style": "emphasis",
+          "items": [
+              {
+                  "type": "ColumnSet",
+                  "columns": [
+                      {
+                          "type": "Column",
+                          "items": [
+                              {
+                                  "type": "TextBlock",
+                                  "size": "Large",
+                                  "weight": "Bolder",
+                                  "text": "**クエストの依頼**"
+                              }
+                          ],
+                          "width": "stretch"
+                      }
+                  ]
+              }
+          ],
+          "bleed": true
+      },
+      {
+          "type": "Container",
+          "items": [
+              {
+                  "type": "ColumnSet",
+                  "columns": [
+                      {
+                          "type": "Column",
+                          "items": [
+                              {
+                                  "type": "TextBlock",
+                                  "size": "ExtraLarge",
+                                  "text": "Cisco Collaboration DX の対応",
+                                  "wrap": true
+                              },
+                              {
+                                  "type": "TextBlock",
+                                  "spacing": "Small",
+                                  "size": "Small",
+                                  "weight": "Bolder",
+                                  "color": "Accent",
+                                  "text": ""
+                              }
+                          ],
+                          "width": "stretch",
+                          "style": "warning"
+                      }
+                  ]
+              },
+              {
+                  "type": "FactSet",
+                  "spacing": "Large",
+                  "facts": [
+                      {
+                          "title": "機器",
+                          "value": "*Collaboratioon DX*"
+                      },
+                      {
+                          "title": "発生時刻",
+                          "value": "2020/02/14"
+                      },
+                      {
+                          "title": "重要度",
+                          "value": "A"
+                      },
+                      {
+                          "title": "内容",
+                          "value": "-----。"
+                      },
+                      {
+                          "title": "所要時間",
+                          "value": "3時間"
+                      },
+                      {
+                          "title": "報酬",
+                          "value": "X万円"
+                      }
+                  ]
+              }
+          ]
+      },
+      {
+          "type": "Container",
+          "items": [
+              {
+                  "type": "ActionSet",
+                  "actions": [
+                      {
+                          "type": "Action.Submit",
+                          "title": "承諾",
+                          "style": "positive",
+                          "data": {
+                              "id": "_qkQW8dJlUeLVi7ZMEzYVw",
+                              "action": "approve"
+                          }
+                      },
+                      {
+                          "type": "Action.ShowCard",
+                          "title": "拒否",
+                          "style": "destructive",
+                          "card": {
+                              "type": "AdaptiveCard",
+                              "body": [
+                                  {
+                                      "type": "Input.Text",
+                                      "id": "RejectCommentID",
+                                      "placeholder": "Please specify an appropriate reason for rejection.",
+                                      "isMultiline": true
+                                  }
+                              ],
+                              "actions": [
+                                  {
+                                      "type": "Action.Submit",
+                                      "title": "Send",
+                                      "data": {
+                                          "id": "_qkQW8dJlUeLVi7ZMEzYVw",
+                                          "action": "reject"
+                                      }
+                                  }
+                              ],
+                              "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+                          }
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.1",
+  "fallbackText": "This card requires Adaptive Cards v1.2 support to be rendered properly."
+}
+  }
+]
+}
